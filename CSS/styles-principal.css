@@ -373,3 +373,137 @@ footer {
     transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
     transition: transform 0.3s; /* Añade una transición suave */
 }
+
+/* Estilos para pantallas de hasta 1024px */
+@media (max-width: 1024px) {
+    .Header_menu_link {
+        font-size: 18px;
+        padding: 8px 16px;
+        margin: 0 10px;
+    }
+    
+    .presentacion__contenido__titulo {
+        font-size: 70px;
+    }
+
+    .presentacion__contenido__subtitulo {
+        font-size: 22px;
+    }
+
+    .presentación__enlaces__link img {
+        width: 25px;
+        margin-right: 15px;
+    }
+
+    .carousel-images img {
+        width: 70%;
+        margin: 0 30px;
+    }
+
+    .presentacion__contenido_item {
+        flex: 1 1 calc(50% - 20px); /* Dos ítems por fila */
+    }
+}
+
+/* Estilos para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .Header_menu {
+        display: flex;
+        justify-content: center; /* Centramos los elementos */
+        flex-grow: 1;
+        padding: 0;
+    }
+
+    .Header_menu_link {
+        font-size: 18px;
+        padding: 8px 12px; /* Reducimos el padding para hacer más compactos los enlaces */
+        margin: 0 5px; /* Reducimos el margen entre los enlaces */
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    #icono_mya {
+        margin-right: 10px; /* Asegura que el ícono no esté demasiado cerca de los enlaces */
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 50px;
+    }
+
+    .presentacion__contenido__subtitulo {
+        font-size: 20px;
+    }
+
+    .carousel-images img {
+        width: 60%;
+        margin: 0 20px;
+    }
+
+    .presentacion__contenido_item {
+        flex: 1 1 100%; /* Un ítem por fila */
+    }
+}
+
+/* Estilos para pantallas de hasta 480px */
+@media (max-width: 480px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .Header_menu {
+        display: flex;
+        justify-content: center; /* Centramos los elementos también en pantallas pequeñas */
+        flex-grow: 1;
+    }
+
+    .Header_menu_link {
+        font-size: 16px;
+        padding: 6px 10px; /* Reducimos el padding y el tamaño de fuente */
+        margin: 4px; /* Espacio mínimo entre los enlaces */
+    }
+
+    #icono_mya {
+        margin-right: 8px; /* Ajustamos el margen derecho para evitar colisión con los enlaces */
+    }
+
+    .icono_mya {
+        width: 40px;
+        left: 5px;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 35px;
+    }
+
+    .presentacion__contenido__subtitulo {
+        font-size: 18px;
+    }
+
+    .presentación__enlaces__link img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    .carousel-images img {
+        width: 50%;
+        margin: 0 10px;
+    }
+
+    .presentacion__contenido_item {
+        flex: 1 1 100%; /* Un ítem por fila */
+    }
+
+    .footer {
+        padding: 10px;
+        text-align: center;
+    }
+}

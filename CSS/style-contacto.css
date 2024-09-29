@@ -1,18 +1,22 @@
 .contact {
     margin-bottom: 40px;
 }
+
 .social-media {
     margin: 20px 0;
 }
+
 .social-media a {
     margin-right: 15px;
     text-decoration: none;
     color: #333;
 }
+
 #map {
     height: 400px;
     width: 100%;
 }
+
 .consultation-form {
     background-color: #f9f9f9; /* Fondo claro */
     border: 1px solid #ccc; /* Bordes */
@@ -105,4 +109,100 @@
     flex-direction: column;
     flex: 1;
     padding: 9px;
+}
+
+/* Estilos para pantallas de hasta 1024px */
+@media (max-width: 1024px) {
+    .contact-container {
+        gap: 15px; /* Reducir el espacio entre el mapa y el formulario */
+    }
+
+    .consultation-form h3, 
+    .customer-support h3 {
+        font-size: 20px; /* Reducir ligeramente el tamaño del título */
+    }
+
+    .consultation-form input, 
+    .consultation-form textarea {
+        padding: 9px; /* Ajustar el padding */
+    }
+
+    .consultation-form button {
+        font-size: 15px; /* Reducir ligeramente el tamaño de la fuente */
+    }
+}
+
+/* Estilos para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; /* Colocar los elementos en columna */
+        gap: 10px; /* Reducir aún más el espacio entre los elementos */
+    }
+
+    .contact-container .map, 
+    .contact-container .consultation-form {
+        width: 100%; /* Ambos elementos ocupan todo el ancho */
+    }
+
+    .consultation-form, 
+    .customer-support {
+        padding: 15px; /* Reducir el padding para pantallas más pequeñas */
+    }
+
+    .consultation-form h3, 
+    .customer-support h3 {
+        font-size: 18px; /* Reducir más el tamaño del título */
+    }
+
+    .consultation-form button {
+        width: 100%; /* El botón ocupa todo el ancho */
+        font-size: 14px; /* Reducir el tamaño de la fuente */
+    }
+
+    .right-column {
+        width: 100%; /* Ocupar el ancho total */
+        margin: 0 auto; /* Centrar si es necesario */
+        padding: 0; /* Ajustar el padding si es necesario */
+    }
+
+    .social-media a {
+        margin-right: 10px; /* Reducir el espacio entre íconos sociales */
+    }
+}
+
+/* Estilos para pantallas de hasta 480px */
+@media (max-width: 480px) {
+    .consultation-form input, 
+    .consultation-form textarea {
+        padding: 8px; /* Reducir padding en campos de texto */
+        font-size: 14px; /* Reducir tamaño de la fuente */
+    }
+
+    .consultation-form button {
+        padding: 8px 12px; /* Ajustar el espaciado del botón */
+        font-size: 13px; /* Reducir aún más el tamaño de la fuente */
+    }
+
+    .contact-container {
+        gap: 5px; /* Menor espacio entre el mapa y el formulario */
+    }
+
+    .customer-support p {
+        font-size: 14px; /* Reducir tamaño de fuente en el soporte al cliente */
+    }
+
+    .social-media a {
+        margin-right: 5px; /* Ajustar espaciado de íconos sociales */
+    }
+
+    .right-column {
+        width: 100%; /* Ocupar el ancho total */
+        margin: 0 auto; /* Centrar si es necesario */
+        padding: 0; /* Ajustar el padding si es necesario */
+    }
+
+    .consultation-form h3, 
+    .customer-support h3 {
+        font-size: 16px; /* Reducir el tamaño del título */
+    }
 }
