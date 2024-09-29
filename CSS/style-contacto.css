@@ -13,8 +13,10 @@
 }
 
 #map {
-    height: 400px;
-    width: 100%;
+    height: auto;
+    width: 100%; /* Aseguramos que el mapa ocupe el 100% del contenedor */
+    max-width: 100%; /* Prevenir que el mapa exceda el ancho máximo del contenedor */
+    border: 0; /* Eliminar cualquier borde que pueda afectar el diseño */
 }
 
 .consultation-form {
@@ -69,7 +71,9 @@
 }
 
 .contact-container .map {
-    flex: 1; /* El mapa ocupará más espacio si es necesario */
+    width: 40%; /* El contenedor del mapa también ocupa todo el ancho */
+    overflow: hidden; /* Evitar que se desborde el contenido */
+    max-width: 100%; /* Evitar que el mapa exceda los límites del contenedor */
 }
 
 .contact-container .consultation-form {
@@ -110,52 +114,65 @@
     flex: 1;
     padding: 9px;
 }
-/* Estilos para pantallas de hasta 1200px */
-@media (max-width: 1200px) {
+
+/* Estilos para pantallas de hasta 1024px */
+@media (max-width: 1024px) {
     .contact-container {
         gap: 15px; /* Reducir el espacio entre el mapa y el formulario */
     }
 
     .consultation-form h3, 
     .customer-support h3 {
-        font-size: 22px; /* Ajustar ligeramente el tamaño del título */
+        font-size: 20px; /* Reducir ligeramente el tamaño del título */
     }
 
     .consultation-form input, 
     .consultation-form textarea {
-        padding: 10px; /* Ajustar el padding */
+        padding: 9px; /* Ajustar el padding */
     }
 
     .consultation-form button {
-        font-size: 16px; /* Ajustar el tamaño de la fuente */
+        font-size: 15px; /* Reducir ligeramente el tamaño de la fuente */
+    }
+
+    .contact-container {
+        flex-direction: column; /* Colocar los elementos en columna */
+    }
+    .contact-container .map {
+        width: 100%; /* El mapa ocupa el 100% del ancho */
+        max-width: 100%;
     }
 }
 
-/* Estilos para pantallas entre 768px y 1199px */
-@media (min-width: 768px) and (max-width: 1199px) {
+/* Estilos para pantallas de hasta 768px */
+@media (max-width: 768px) {
     .contact-container {
         flex-direction: column; /* Colocar los elementos en columna */
-        gap: 12px; /* Ajustar el espacio entre los elementos */
+        gap: 10px; /* Reducir aún más el espacio entre los elementos */
     }
 
-    .contact-container .map, 
     .contact-container .consultation-form {
         width: 100%; /* Ambos elementos ocupan todo el ancho */
     }
 
     .consultation-form, 
     .customer-support {
-        padding: 18px; /* Ajustar el padding para pantallas intermedias */
+        padding: 15px; /* Reducir el padding para pantallas más pequeñas */
     }
 
     .consultation-form h3, 
     .customer-support h3 {
-        font-size: 20px; /* Ajustar el tamaño del título */
+        font-size: 18px; /* Reducir más el tamaño del título */
+    }
+
+    .contact-container .map {
+        width: 100%; /* Asegurar que el mapa ocupe todo el ancho */
+        height: 300px; /* Fijar una altura específica si es necesario */
     }
 
     .consultation-form button {
         width: 100%; /* El botón ocupa todo el ancho */
-        font-size: 15px; /* Ajustar el tamaño de la fuente */
+        font-size: 14px; /* Reducir el tamaño de la fuente */
     }
 
     .right-column {
@@ -165,25 +182,30 @@
     }
 
     .social-media a {
-        margin-right: 8px; /* Ajustar el espacio entre íconos sociales */
+        margin-right: 10px; /* Reducir el espacio entre íconos sociales */
     }
 }
 
-/* Estilos para pantallas de hasta 767px */
-@media (max-width: 767px) {
+/* Estilos para pantallas de hasta 480px */
+@media (max-width: 480px) {
     .consultation-form input, 
     .consultation-form textarea {
         padding: 8px; /* Reducir padding en campos de texto */
         font-size: 14px; /* Reducir tamaño de la fuente */
     }
 
+    .contact-container {
+        flex-direction: column; /* Alinear en columna */
+        gap: 5px; /* Menor espacio entre el mapa y el formulario */
+    }
+    .contact-container .map {
+        width: 100%; /* Mantener el ancho completo */
+        height: 250px; /* Reducir altura para pantallas pequeñas */
+    }
+
     .consultation-form button {
         padding: 8px 12px; /* Ajustar el espaciado del botón */
         font-size: 13px; /* Reducir aún más el tamaño de la fuente */
-    }
-
-    .contact-container {
-        gap: 5px; /* Menor espacio entre el mapa y el formulario */
     }
 
     .customer-support p {

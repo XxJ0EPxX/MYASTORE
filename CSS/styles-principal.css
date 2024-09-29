@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Frijole&family=Krona+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Nag+Mundari:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&display=swap');
 
 /* Globales */
 *::after,
@@ -149,9 +151,9 @@ header {
     color: #ec407a;
     -webkit-text-stroke: 1px #F8F8F8;
     text-shadow: 0px 1px 4px;
-    font-size: 90px;
-    font-weight: 70;
-    font-family: "Monotype Corsiva", system-ui;
+    font-size: 150px;
+    font-weight: 1;
+    font-family: "Bonheur Royale", cursive;
     text-align: center;
 }
 
@@ -160,7 +162,7 @@ header {
     color: #f48fb1;
     font-weight: bold;
     text-align: center;
-    font-family: "Soho Pro", system-ui;
+    font-family: "Bevan", serif;
     margin-bottom: 20px;
     font-size: 25PX;
 }
