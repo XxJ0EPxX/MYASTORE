@@ -374,25 +374,71 @@ footer {
     transition: transform 0.3s; /* Añade una transición suave */
 }
 
-/* Estilos para pantallas de hasta 1024px */
-@media (max-width: 1024px) {
+/* Estilos para pantallas de hasta 1200px */
+@media (max-width: 1200px) {
+    .Header_menu_link {
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 0 15px;
+    }
+    
+    .presentacion__contenido__titulo {
+        font-size: 80px;
+    }
+
+    .presentacion__contenido__subtitulo {
+        font-size: 24px;
+    }
+
+    .presentación__enlaces__link img {
+        width: 30px;
+        margin-right: 20px;
+    }
+
+    .carousel-images img {
+        width: 80%;
+        margin: 0 40px;
+    }
+
+    .presentacion__contenido_item {
+        flex: 1 1 calc(50% - 30px); /* Dos ítems por fila */
+    }
+}
+
+/* Estilos para pantallas entre 768px y 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+    }
+
+    .Header_menu {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        padding: 0;
+    }
+
     .Header_menu_link {
         font-size: 18px;
         padding: 8px 16px;
         margin: 0 10px;
+        text-align: center;
+        white-space: nowrap;
     }
-    
+
+    #icono_mya {
+        margin-right: 12px;
+    }
+
     .presentacion__contenido__titulo {
         font-size: 70px;
     }
 
     .presentacion__contenido__subtitulo {
         font-size: 22px;
-    }
-
-    .presentación__enlaces__link img {
-        width: 25px;
-        margin-right: 15px;
     }
 
     .carousel-images img {
@@ -405,54 +451,8 @@ footer {
     }
 }
 
-/* Estilos para pantallas de hasta 768px */
-@media (max-width: 768px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .Header_menu {
-        display: flex;
-        justify-content: center; /* Centramos los elementos */
-        flex-grow: 1;
-        padding: 0;
-    }
-
-    .Header_menu_link {
-        font-size: 18px;
-        padding: 8px 12px; /* Reducimos el padding para hacer más compactos los enlaces */
-        margin: 0 5px; /* Reducimos el margen entre los enlaces */
-        text-align: center;
-        white-space: nowrap;
-    }
-
-    #icono_mya {
-        margin-right: 10px; /* Asegura que el ícono no esté demasiado cerca de los enlaces */
-    }
-
-    .presentacion__contenido__titulo {
-        font-size: 50px;
-    }
-
-    .presentacion__contenido__subtitulo {
-        font-size: 20px;
-    }
-
-    .carousel-images img {
-        width: 60%;
-        margin: 0 20px;
-    }
-
-    .presentacion__contenido_item {
-        flex: 1 1 100%; /* Un ítem por fila */
-    }
-}
-
-/* Estilos para pantallas de hasta 480px */
-@media (max-width: 480px) {
+/* Estilos para pantallas de hasta 767px */
+@media (max-width: 767px) {
     header {
         display: flex;
         justify-content: space-between;
@@ -461,18 +461,18 @@ footer {
 
     .Header_menu {
         display: flex;
-        justify-content: center; /* Centramos los elementos también en pantallas pequeñas */
+        justify-content: center;
         flex-grow: 1;
     }
 
     .Header_menu_link {
         font-size: 16px;
-        padding: 6px 10px; /* Reducimos el padding y el tamaño de fuente */
-        margin: 4px; /* Espacio mínimo entre los enlaces */
+        padding: 6px 10px;
+        margin: 4px;
     }
 
     #icono_mya {
-        margin-right: 8px; /* Ajustamos el margen derecho para evitar colisión con los enlaces */
+        margin-right: 8px;
     }
 
     .icono_mya {
@@ -507,3 +507,4 @@ footer {
         text-align: center;
     }
 }
+

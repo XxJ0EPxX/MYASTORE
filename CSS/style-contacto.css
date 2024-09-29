@@ -110,33 +110,32 @@
     flex: 1;
     padding: 9px;
 }
-
-/* Estilos para pantallas de hasta 1024px */
-@media (max-width: 1024px) {
+/* Estilos para pantallas de hasta 1200px */
+@media (max-width: 1200px) {
     .contact-container {
         gap: 15px; /* Reducir el espacio entre el mapa y el formulario */
     }
 
     .consultation-form h3, 
     .customer-support h3 {
-        font-size: 20px; /* Reducir ligeramente el tamaño del título */
+        font-size: 22px; /* Ajustar ligeramente el tamaño del título */
     }
 
     .consultation-form input, 
     .consultation-form textarea {
-        padding: 9px; /* Ajustar el padding */
+        padding: 10px; /* Ajustar el padding */
     }
 
     .consultation-form button {
-        font-size: 15px; /* Reducir ligeramente el tamaño de la fuente */
+        font-size: 16px; /* Ajustar el tamaño de la fuente */
     }
 }
 
-/* Estilos para pantallas de hasta 768px */
-@media (max-width: 768px) {
+/* Estilos para pantallas entre 768px y 1199px */
+@media (min-width: 768px) and (max-width: 1199px) {
     .contact-container {
         flex-direction: column; /* Colocar los elementos en columna */
-        gap: 10px; /* Reducir aún más el espacio entre los elementos */
+        gap: 12px; /* Ajustar el espacio entre los elementos */
     }
 
     .contact-container .map, 
@@ -146,17 +145,17 @@
 
     .consultation-form, 
     .customer-support {
-        padding: 15px; /* Reducir el padding para pantallas más pequeñas */
+        padding: 18px; /* Ajustar el padding para pantallas intermedias */
     }
 
     .consultation-form h3, 
     .customer-support h3 {
-        font-size: 18px; /* Reducir más el tamaño del título */
+        font-size: 20px; /* Ajustar el tamaño del título */
     }
 
     .consultation-form button {
         width: 100%; /* El botón ocupa todo el ancho */
-        font-size: 14px; /* Reducir el tamaño de la fuente */
+        font-size: 15px; /* Ajustar el tamaño de la fuente */
     }
 
     .right-column {
@@ -166,12 +165,12 @@
     }
 
     .social-media a {
-        margin-right: 10px; /* Reducir el espacio entre íconos sociales */
+        margin-right: 8px; /* Ajustar el espacio entre íconos sociales */
     }
 }
 
-/* Estilos para pantallas de hasta 480px */
-@media (max-width: 480px) {
+/* Estilos para pantallas de hasta 767px */
+@media (max-width: 767px) {
     .consultation-form input, 
     .consultation-form textarea {
         padding: 8px; /* Reducir padding en campos de texto */
