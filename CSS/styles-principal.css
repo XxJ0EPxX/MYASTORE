@@ -148,11 +148,9 @@ header {
 }
 
 .presentacion__contenido__titulo {
+    font-size: 10vw;
     color: #ec407a;
-    -webkit-text-stroke: 1px #F8F8F8;
     text-shadow: 0px 1px 4px;
-    font-size: 150px;
-    font-weight: 1;
     font-family: "Bonheur Royale", cursive;
     text-align: center;
 }
@@ -385,7 +383,7 @@ footer {
     }
     
     .presentacion__contenido__titulo {
-        font-size: 80px;
+        font-size: 50px;
     }
 
     .presentacion__contenido__subtitulo {
@@ -510,3 +508,99 @@ footer {
     }
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    .Header_menu_link {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 8vw;
+    }
+
+    .presentacion__contenido__subtitulo {
+        font-size: 22px;
+    }
+
+    .presentacion__contenido_texto {
+        font-size: 18px;
+    }
+
+    .presentación__contenido_item {
+        flex: 1 1 calc(50% - 30px); /* Dos ítems por fila */
+        margin-bottom: 20px;
+    }
+
+    .presentacion__contenido_item img {
+        width: 70px;
+    }
+
+    .carousel-images img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .Header_menu_link {
+        font-size: 16px;
+        padding: 6px 10px;
+        margin: 0 10px;
+    }
+
+    .presentacion__contenido__titulo {
+        font-size: 12vw;
+    }
+
+    .presentacion__contenido__subtitulo {
+        font-size: 18px;
+    }
+
+    .presentacion__contenido_texto {
+        font-size: 16px;
+    }
+
+    .presentacion__contenido_item {
+        flex: 1 1 100%; /* Un ítem por fila */
+        margin-bottom: 15px;
+    }
+
+    .presentacion__contenido_item img {
+        width: 50px;
+    }
+
+    .carousel-images img {
+        width: 90%;
+    }
+
+    .footer .presentación__enlaces {
+        flex-direction: column;
+    }
+
+    .footer .presentación__enlaces__link {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .presentacion__contenido {
+        padding: 15px;
+    }
+
+    .Header_menu_link {
+        padding: 8px 10px;
+    }
+
+    .presentacion__contenido_item {
+        margin-bottom: 15px;
+    }
+}

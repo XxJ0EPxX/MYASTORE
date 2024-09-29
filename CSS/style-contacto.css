@@ -227,3 +227,114 @@
         font-size: 16px; /* Reducir el tamaño del título */
     }
 }
+
+@media (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column; /* Cambiar a disposición en columna */
+        gap: 10px; /* Reducir espacio entre elementos */
+    }
+
+    .contact-container .map, 
+    .contact-container .consultation-form {
+        width: 100%; /* Ambos elementos ocuparán todo el ancho */
+    }
+
+    .consultation-form {
+        padding: 15px; /* Reducir el espaciado interno */
+    }
+
+    .consultation-form button {
+        font-size: 14px; /* Ajustar el tamaño del texto */
+        padding: 8px 12px; /* Ajustar el padding */
+    }
+
+    .customer-support {
+        padding: 15px; /* Reducir el espaciado interno */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        margin-bottom: 30px; /* Reducir el margen inferior */
+    }
+
+    .social-media {
+        text-align: center; /* Centrar iconos */
+    }
+
+    .social-media a {
+        margin-right: 10px; /* Reducir el margen derecho */
+        font-size: 14px; /* Ajustar el tamaño de los iconos/enlaces */
+    }
+
+    .consultation-form {
+        padding: 10px; /* Reducir el padding */
+    }
+
+    .consultation-form input, 
+    .consultation-form textarea {
+        padding: 8px; /* Reducir el padding de los campos */
+    }
+
+    .consultation-form button {
+        padding: 8px; /* Ajustar el tamaño del botón */
+        font-size: 14px;
+    }
+
+    .customer-support {
+        padding: 10px; /* Reducir el padding */
+    }
+
+    .customer-support p {
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+
+    .right-column {
+        padding: 5px; /* Reducir padding en la columna derecha */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        margin-bottom: 20px; /* Reducir más el margen inferior */
+    }
+
+    .social-media {
+        margin: 10px 0; /* Reducir el margen superior/inferior */
+        text-align: center; /* Asegurarse de que los iconos estén centrados */
+    }
+
+    .social-media a {
+        margin-right: 5px; /* Reducir el margen entre los iconos */
+        font-size: 12px; /* Hacer los iconos más pequeños */
+    }
+
+    .consultation-form {
+        padding: 5px; /* Reducir padding interno */
+        box-shadow: none; /* Eliminar la sombra en pantallas pequeñas */
+    }
+
+    .consultation-form input, 
+    .consultation-form textarea {
+        padding: 6px; /* Reducir padding en los campos */
+        font-size: 14px; /* Reducir el tamaño del texto */
+    }
+
+    .consultation-form button {
+        padding: 6px 10px; /* Reducir el tamaño del botón */
+        font-size: 12px;
+    }
+
+    .customer-support {
+        padding: 5px; /* Reducir el padding en la sección de soporte */
+        box-shadow: none; /* Eliminar la sombra */
+    }
+
+    .customer-support p {
+        font-size: 12px; /* Reducir tamaño de fuente */
+    }
+
+    .right-column {
+        padding: 5px; /* Ajustar padding */
+    }
+}

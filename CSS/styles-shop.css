@@ -526,3 +526,140 @@ header {
         padding: 8px 15px; /* Reduce el padding */
     }
 }
+
+/* Media Queries */
+
+/* Para pantallas pequeñas (teléfonos móviles en orientación vertical) */
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .icono_mya {
+        top: 5px;
+        left: 5px;
+        width: 40px;
+    }
+
+    .Header_menu_link {
+        font-size: 16px;
+        padding: 8px 16px;
+        margin: 5px;
+    }
+
+    .header-search {
+        max-width: 200px;
+    }
+
+    .icon-cart {
+        width: 35px;
+        height: 35px;
+    }
+
+    .container-items {
+        grid-template-columns: 1fr; /* Un solo producto por fila */
+        gap: 10px;
+    }
+
+    .item img {
+        height: 200px; /* Altura más pequeña */
+    }
+
+    .info-product {
+        padding: 10px 20px;
+        line-height: 1.5;
+    }
+
+    .cart-product {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .cart-total h3, .total-pagar {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+}
+
+/* Para pantallas medianas (tabletas en orientación horizontal) */
+@media (max-width: 991px) and (min-width: 768px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    .Header_menu_link {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .container-items {
+        grid-template-columns: repeat(2, 1fr); /* Dos productos por fila */
+    }
+
+    .item img {
+        height: 250px;
+    }
+
+    .info-product {
+        padding: 12px 25px;
+    }
+
+    .cart-product {
+        padding: 25px;
+    }
+
+    .price {
+        font-size: 17px;
+    }
+}
+
+/* Para pantallas más pequeñas que 576px (teléfonos pequeños) */
+@media (max-width: 400px) {
+    header {
+        padding: 5px;
+    }
+
+    .Header_menu_link {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .icon-cart {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container-items {
+        grid-template-columns: 1fr;
+    }
+
+    .item img {
+        height: 180px;
+    }
+
+    .info-product {
+        padding: 8px 15px;
+    }
+
+    .cart-product {
+        padding: 15px;
+    }
+
+    .cart-total h3, .total-pagar {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .btn-send-whatsapp {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
