@@ -1,0 +1,108 @@
+.contact {
+    margin-bottom: 40px;
+}
+.social-media {
+    margin: 20px 0;
+}
+.social-media a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #333;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+.consultation-form {
+    background-color: #f9f9f9; /* Fondo claro */
+    border: 1px solid #ccc; /* Bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-top: 20px; /* Espaciado superior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.consultation-form h3 {
+    margin-bottom: 15px; /* Espaciado inferior */
+    color: #d5006d; /* Color atractivo para el título */
+}
+
+.consultation-form label {
+    display: block; /* Etiquetas en bloque */
+    margin-bottom: 5px; /* Espaciado inferior */
+    font-weight: bold; /* Negrita */
+}
+
+.consultation-form input, 
+.consultation-form textarea {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Bordes */
+    border-radius: 4px; /* Bordes redondeados */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.consultation-form button {
+    background-color: #d5006d; /* Color del botón */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 15px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave */
+}
+
+.consultation-form button:hover {
+    background-color: #a3004c; /* Color al pasar el ratón */
+}
+
+.contact-container {
+    display: flex; /* Coloca los elementos en fila */
+    gap: 20px; /* Espaciado entre el mapa y el formulario */
+    justify-content: space-between; /* Distribuye el espacio sobrante */
+    align-items: flex-start; /* Alinea ambos elementos al inicio */
+}
+
+.contact-container .map {
+    flex: 1; /* El mapa ocupará más espacio si es necesario */
+}
+
+.contact-container .consultation-form {
+    flex: 1; /* El formulario ocupará la misma cantidad de espacio */
+}
+
+.customer-support {
+    background-color: #f9f9f9; /* Fondo claro similar al formulario */
+    border: 1px solid #ccc; /* Bordes como el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-top: 20px; /* Espaciado superior */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.customer-support h3 {
+    margin-bottom: 15px; /* Espaciado inferior */
+    color: #d5006d; /* Color del título, igual al formulario */
+}
+
+.customer-support p {
+    margin-bottom: 10px; /* Espaciado entre párrafos */
+    line-height: 1.5; /* Espaciado de línea para mejor legibilidad */
+}
+
+.customer-support a {
+    color: #d5006d; /* Enlace en color del título */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.customer-support a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 9px;
+}

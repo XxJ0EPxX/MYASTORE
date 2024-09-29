@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es-pe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Mya Store</title>
+    <link rel="shortcut icon" href="https://i.postimg.cc/kXgWsjrj/logo-mya.png">
+    <link rel="stylesheet" href="CSS/styles-principal.css">
+    <link rel="stylesheet" href="CSS/style-contacto.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="Header">
+        <nav class="Header_menu">
+            <a class="Header_menu_link" href="index.html">INICIO</a>
+            <a class="Header_menu_link" href="store.html">TIENDA</a>
+            <a class="Header_menu_link" href="contacto.html">CONTACTO</a>
+
+            <img class="icono_mya" src="https://i.postimg.cc/kXgWsjrj/logo-mya.png" alt="icono_mya">
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="contact-container">
+        <div class="map">
+            <h3>Ubicación:</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.5724628546823!2d-76.9581081240201!3d-12.072910142389977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c6ef2e07369b%3A0x43d5e9ebb2a36de6!2sMYA%20SALON!5e0!3m2!1sen!2spe!4v1727097407110!5m2!1sen!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="right-column">
+            <div class="consultation-form">
+                <h3>Libro de reclamos por WhatsApp:</h3>
+                    <form id="whatsappForm" onsubmit="sendWhatsApp(event)">
+                        <label for="name">Nombre del cliente:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="message">Mensaje:</label>                            
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+            </div>
+           <!-- Asesoría, ventas y consultas -->
+            <div class="customer-support">
+                <h3>Asesoría, ventas y consultas:</h3>
+                <p>Central Whatsapp: <a href="https://wa.me/message/VPIQOH7Q52XFK1" target="_blank" rel="noopener noreferrer">966569842</a></p>
+                <p>Lunes a Sábado 10 am - 8 pm</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="presentación__enlaces_subtitulos">
+            <p>Para más información, no dudes en ponerte en contacto con nosotros:</p>
+            <div class="presentación__enlaces">
+                <a class="presentación__enlaces__link" href="https://www.facebook.com/share/HNMqkKenDftEjiLE/?mibextid=kFxxJD" target="_blank" rel="noopener noreferrer">
+                    <img 
+                    src="https://i.postimg.cc/wTfGbGM1/facebook.png" 
+                    alt="Facebook Icon">
+                    Facebook
+                </a>
+                <a class="presentación__enlaces__link" href="https://www.instagram.com/invites/contact/?igsh=1azjdp8jot4kz&utm_content=biqccn8" target="_blank" rel="noopener noreferrer">
+                    <img 
+                    src="https://i.postimg.cc/FHYBtVkD/instagram.png"
+                    alt="Instagram Icon">
+                    Instagram
+                </a>
+                <a class="presentación__enlaces__link" href="https://www.tiktok.com/@mya_salon_?_t=8pwuh0CGEic&_r=1" target="_blank" rel="noopener noreferrer">
+                    <img 
+                    src="https://i.postimg.cc/gJWSZ9ST/tiktok.png"
+                    alt="TikTok Icon">
+                    TikTok
+                </a>
+                <a class="presentación__enlaces__link" href="https://wa.me/message/VPIQOH7Q52XFK1" target="_blank" rel="noopener noreferrer">
+                    <img 
+                    src="https://i.postimg.cc/Gm6SbTkr/whatsapp.png"
+                    alt="WhatsApp Icon">
+                    Whatsapp
+                </a>
+            </div>
+        </div>
+        <p>&copy; 2024 Mya Store. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="index-principal.js"></script>
+    <script src="contacto.js"></script>
+</body>
+</html>
