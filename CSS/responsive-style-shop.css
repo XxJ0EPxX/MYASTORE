@@ -1,0 +1,308 @@
+/* Estilos para pantallas grandes (desktops) */
+@media (min-width: 1200px) {
+    .container-items {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+    }
+
+    header {
+        padding: 8px 20px; /* Padding ajustado */
+        height: auto; /* Altura dinámica */
+    }
+
+    .Header_menu_link {
+        font-size: 18px; /* Tamaño de fuente más pequeño */
+        padding: 8px 15px; /* Padding ajustado */
+    }
+
+    .header-search {
+        max-width: 500px; /* Ampliar la barra de búsqueda */
+    }
+
+    .icon-cart {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item img {
+        height: 400px; /* Imágenes más grandes */
+    }
+}
+
+/* Estilos para pantallas medianas (tablets) */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .container-items {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a dos columnas */
+    }
+    
+    header {
+        padding: 8px 15px;
+        height: auto; /* Mantener la altura compacta */
+        flex-direction: row; /* Mantiene los elementos alineados en fila */
+        align-items: center;
+    }
+
+    .icono_mya {
+        width: 40px; /* Ajusta el tamaño del logo */
+    }
+
+    .header-search {
+        max-width: 250px; /* Reduce el ancho de la barra de búsqueda */
+    }
+
+    .Header_menu {
+        justify-content: space-evenly; /* Espaciado uniforme para los enlaces */
+        width: 100%;
+    }
+
+    .Header_menu_link {
+        margin: 5px 10px; /* Espacio entre enlaces ajustado */
+        font-size: 16px; /* Fuente más pequeña para tablets */
+        padding: 8px 10px; /* Padding reducido */
+    }
+
+    .icon-cart {
+        width: 35px;
+        height: 35px;
+    }
+
+    .item img {
+        height: 250px; /* Ajusta la altura de las imágenes */
+    }
+
+    .filters {
+        flex-direction: row; /* Mantén los filtros en fila */
+        gap: 15px; /* Ajusta el espacio entre filtros */
+        flex-wrap: wrap; /* Asegura que los filtros se alineen dentro de la pantalla */
+    }
+
+    .filters select {
+        width: auto; /* Permite que los filtros se ajusten automáticamente */
+        min-width: 100px; /* Asegura que los filtros no sean demasiado estrechos */
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 767px) {
+    .container-items {
+        grid-template-columns: 1fr; /* Cambia a una columna */
+    }
+
+    header {
+        padding: 5px 10px; /* Reduce padding */
+        height: auto; /* Mantiene el header bajo */
+        flex-direction: column; /* Coloca los elementos en columna */
+        align-items: center;
+    }
+
+    .icono_mya {
+        width: 35px; /* Tamaño del logo más pequeño */
+        margin-bottom: 5px;
+    }
+
+    .header-search {
+        width: 100%; /* Barra de búsqueda de ancho completo */
+        max-width: 200px; /* Limita el ancho */
+        margin-bottom: 5px; /* Espacio inferior para separar de otros elementos */
+    }
+
+    .Header_menu {
+        flex-direction: row; /* Mantén los enlaces en fila */
+        justify-content: center; /* Centra los enlaces */
+        flex-wrap: wrap; /* Permite que los enlaces se ajusten a la pantalla */
+        width: 100%;
+    }
+
+    .Header_menu_link {
+        font-size: 14px; /* Fuente más pequeña */
+        padding: 5px 10px; /* Padding ajustado */
+        margin: 5px; /* Reduce el margen */
+    }
+
+    .icon-cart {
+        width: 30px;
+        height: 30px; /* Tamaño más pequeño para móviles */
+        margin-top: 5px;
+    }
+
+    .container-icon {
+        position: relative;
+        display: flex;
+        justify-content: right;
+        width: 100%; /* Mantiene el carrito centrado */
+        margin-top: -40px;
+    }
+
+    .item img {
+        width: auto; /* Mantiene el ancho de la imagen según sus proporciones */
+        max-width: 100%; /* Asegura que la imagen no se salga del contenedor */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+        display: block; /* Asegura que no haya espacio en blanco a los lados */
+        margin: 0 auto; /* Centra la imagen si es más pequeña que el contenedor */
+    }
+
+    .info-product {
+        padding: 10px 15px; /* Reduce el padding en la información del producto */
+    }
+
+    .filters {
+        flex-direction: column; /* Los filtros se colocan en columna */
+        gap: 10px; /* Reduce el espacio entre filtros */
+        width: 100%; /* Asegura que los filtros no se salgan del ancho de la pantalla */
+        padding: 10px; /* Ajusta el padding para mejor separación */
+        justify-items: center;
+    }
+
+    .filters select {
+        width: 100%; /* Los filtros se extienden a todo el ancho */
+    }
+
+    .btn-send-whatsapp {
+        font-size: 14px;
+        padding: 8px 15px; /* Reduce el padding */
+    }
+}
+
+/* Media Queries */
+
+/* Para pantallas pequeñas (teléfonos móviles en orientación vertical) */
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .icono_mya {
+        top: 5px;
+        left: 5px;
+        width: 40px;
+    }
+
+    .Header_menu_link {
+        font-size: 16px;
+        padding: 8px 16px;
+        margin: 5px;
+    }
+
+    .header-search {
+        max-width: 200px;
+    }
+
+    .icon-cart {
+        width: 35px;
+        height: 35px;
+    }
+
+    .container-items {
+        grid-template-columns: 1fr; /* Un solo producto por fila */
+        gap: 10px;
+    }
+
+    .item img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .info-product {
+        padding: 10px 20px;
+        line-height: 1.5;
+    }
+
+    .cart-product {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    .cart-total h3, .total-pagar {
+        font-size: 18px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+}
+
+/* Para pantallas medianas (tabletas en orientación horizontal) */
+@media (max-width: 991px) and (min-width: 768px) {
+    header {
+        padding: 15px 10px;
+    }
+
+    .Header_menu_link {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .container-items {
+        grid-template-columns: repeat(2, 1fr); /* Dos productos por fila */
+    }
+
+    .item img {
+        height: 250px;
+    }
+
+    .info-product {
+        padding: 12px 25px;
+    }
+
+    .cart-product {
+        padding: 25px;
+    }
+
+    .price {
+        font-size: 17px;
+    }
+}
+
+/* Para pantallas más pequeñas que 576px (teléfonos pequeños) */
+@media (max-width: 400px) {
+    header {
+        padding: 5px;
+    }
+
+    .Header_menu_link {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .icon-cart {
+        width: 30px;
+        height: 30px;
+    }
+
+    .container-items {
+        grid-template-columns: 1fr;
+    }
+
+    .item img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .info-product {
+        padding: 8px 15px;
+    }
+
+    .cart-product {
+        padding: 15px;
+    }
+
+    .cart-total h3, .total-pagar {
+        font-size: 16px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .btn-send-whatsapp {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}

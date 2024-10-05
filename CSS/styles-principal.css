@@ -193,35 +193,50 @@ header {
     margin-top: 10px;
 }
 
-/*Carrusel body*/
-.carruselbody {
+/* Contenedor principal para carrusel y texto */
+.carousel-text-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
+    gap: 20px; /* Espacio entre el texto y el carrusel */
+    padding: 20px;
+    max-width: 1200px; /* Limitar el ancho máximo para que no se estire demasiado */
+    margin: 0 auto; /* Centra el contenido horizontalmente */
 }
 
-/* Carrusel estilos */
+/* Sección del carrusel */
+.carruselbody {
+    width: 40%; /* Ajusta el tamaño del carrusel */
+}
+
 .carousel {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+    max-width: 280px; /* Limita el tamaño del carrusel */
     overflow: hidden;
     border-radius: 15px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Imágenes del carrusel */
 .carousel-images {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
+    flex-wrap: nowrap;
 }
 
 .carousel-images img {
-    width: 80%; /* Ajusta el tamaño según lo que necesites */
+    max-width: 250px;
+    width: 100%; 
     height: auto;
+    object-fit: cover;
     border-radius: 15px;
-    margin: 0 50px; /* Agrega un margen para separarlas */
+    flex-shrink: 0;
+    margin: 0 15px;
 }
 
+/* Botones de navegación */
 .carousel-prev, .carousel-next {
     position: absolute;
     top: 50%;
@@ -241,6 +256,15 @@ header {
 .carousel-next {
     right: 10px;
 }
+
+/* Sección del texto */
+.text-section {
+    width: 100%; /* Ajusta el ancho del texto */
+    font-size: 23px;
+    color: #333;
+    text-align: justify;
+}
+
 
 /* Contenedor de la sección ¿Por qué elegirnos? */
 .presentacion__contenido2 {
@@ -372,235 +396,4 @@ footer {
 .footer .presentación__enlaces img:hover {
     transform: scale(1.1); /* Aumenta ligeramente el tamaño de la imagen */
     transition: transform 0.3s; /* Añade una transición suave */
-}
-
-/* Estilos para pantallas de hasta 1200px */
-@media (max-width: 1200px) {
-    .Header_menu_link {
-        font-size: 20px;
-        padding: 10px 20px;
-        margin: 0 15px;
-    }
-    
-    .presentacion__contenido__titulo {
-        font-size: 50px;
-    }
-
-    .presentacion__contenido__subtitulo {
-        font-size: 24px;
-    }
-
-    .presentación__enlaces__link img {
-        width: 30px;
-        margin-right: 20px;
-    }
-
-    .carousel-images img {
-        width: 80%;
-        margin: 0 40px;
-    }
-
-    .presentacion__contenido_item {
-        flex: 1 1 calc(50% - 30px); /* Dos ítems por fila */
-    }
-}
-
-/* Estilos para pantallas entre 768px y 1199px */
-@media (min-width: 768px) and (max-width: 1199px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px;
-    }
-
-    .Header_menu {
-        display: flex;
-        justify-content: center;
-        flex-grow: 1;
-        padding: 0;
-    }
-
-    .Header_menu_link {
-        font-size: 18px;
-        padding: 8px 16px;
-        margin: 0 10px;
-        text-align: center;
-        white-space: nowrap;
-    }
-
-    #icono_mya {
-        margin-right: 12px;
-    }
-
-    .presentacion__contenido__titulo {
-        font-size: 70px;
-    }
-
-    .presentacion__contenido__subtitulo {
-        font-size: 22px;
-    }
-
-    .carousel-images img {
-        width: 70%;
-        margin: 0 30px;
-    }
-
-    .presentacion__contenido_item {
-        flex: 1 1 calc(50% - 20px); /* Dos ítems por fila */
-    }
-}
-
-/* Estilos para pantallas de hasta 767px */
-@media (max-width: 767px) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-    }
-
-    .Header_menu {
-        display: flex;
-        justify-content: center;
-        flex-grow: 1;
-    }
-
-    .Header_menu_link {
-        font-size: 16px;
-        padding: 6px 10px;
-        margin: 4px;
-    }
-
-    #icono_mya {
-        margin-right: 8px;
-    }
-
-    .icono_mya {
-        width: 40px;
-        left: 5px;
-    }
-
-    .presentacion__contenido__titulo {
-        font-size: 35px;
-    }
-
-    .presentacion__contenido__subtitulo {
-        font-size: 18px;
-    }
-
-    .presentación__enlaces__link img {
-        width: 20px;
-        margin-right: 10px;
-    }
-
-    .carousel-images img {
-        width: 50%;
-        margin: 0 10px;
-    }
-
-    .presentacion__contenido_item {
-        flex: 1 1 100%; /* Un ítem por fila */
-    }
-
-    .footer {
-        padding: 10px;
-        text-align: center;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-    header {
-        padding: 10px 15px;
-    }
-
-    .Header_menu_link {
-        font-size: 18px;
-        padding: 8px 15px;
-    }
-
-    .presentacion__contenido__titulo {
-        font-size: 8vw;
-    }
-
-    .presentacion__contenido__subtitulo {
-        font-size: 22px;
-    }
-
-    .presentacion__contenido_texto {
-        font-size: 18px;
-    }
-
-    .presentación__contenido_item {
-        flex: 1 1 calc(50% - 30px); /* Dos ítems por fila */
-        margin-bottom: 20px;
-    }
-
-    .presentacion__contenido_item img {
-        width: 70px;
-    }
-
-    .carousel-images img {
-        width: 70%;
-    }
-}
-
-@media (max-width: 767px) {
-    header {
-        flex-direction: column;
-        padding: 10px;
-        text-align: center;
-    }
-
-    .Header_menu_link {
-        font-size: 16px;
-        padding: 6px 10px;
-        margin: 0 10px;
-    }
-
-    .presentacion__contenido__titulo {
-        font-size: 12vw;
-    }
-
-    .presentacion__contenido__subtitulo {
-        font-size: 18px;
-    }
-
-    .presentacion__contenido_texto {
-        font-size: 16px;
-    }
-
-    .presentacion__contenido_item {
-        flex: 1 1 100%; /* Un ítem por fila */
-        margin-bottom: 15px;
-    }
-
-    .presentacion__contenido_item img {
-        width: 50px;
-    }
-
-    .carousel-images img {
-        width: 90%;
-    }
-
-    .footer .presentación__enlaces {
-        flex-direction: column;
-    }
-
-    .footer .presentación__enlaces__link {
-        margin-bottom: 10px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .presentacion__contenido {
-        padding: 15px;
-    }
-
-    .Header_menu_link {
-        padding: 8px 10px;
-    }
-
-    .presentacion__contenido_item {
-        margin-bottom: 15px;
-    }
 }
