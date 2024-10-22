@@ -23,7 +23,7 @@ const calculateTotal = () => {
     let totalOfProducts = 0;
 
     allProducts.forEach(product => {
-        const productPrice = parseFloat(product.price.replace('S/.', '').replace(',', ''));
+        const productPrice = parseFloat(product.price.replace('S/', '').replace(',', ''));
         if (isNaN(productPrice)) {
             console.error(`Error al leer el precio de ${product.title}`);
             return;
@@ -32,7 +32,7 @@ const calculateTotal = () => {
         totalOfProducts += product.quantity;
     });
 
-    valorTotal.innerText = `S/. ${total.toFixed(2)}`;
+    valorTotal.innerText = `S/ ${total.toFixed(2)}`;
     countProducts.innerText = totalOfProducts;
 };
 
@@ -155,13 +155,13 @@ sendToWhatsApp.addEventListener('click', () => {
         message += `Producto: ${product.title}\nCantidad: ${product.quantity}\nPrecio: ${product.price}\n\n`;
     });
 
-    const total = parseFloat(valorTotal.innerText.replace('S/.', '').replace(',', ''));
+    const total = parseFloat(valorTotal.innerText.replace('S/', '').replace(',', ''));
     if (isNaN(total)) {
         alert('Error al calcular el total.');
         return;
     }
 
-    message += `Total a pagar: S/. ${total.toFixed(2)}`;
+    message += `Total a pagar: S/ ${total.toFixed(2)}`;
 
     const whatsappURL = `https://api.whatsapp.com/send?phone=51966569842&text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');

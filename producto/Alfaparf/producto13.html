@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reparative Mask - Tarro 200 ml</title>
+    <link rel="shortcut icon" href="https://i.postimg.cc/kXgWsjrj/logo-mya.png">
+    <link rel="stylesheet" href="/producto/CSS/productos.css">
+    <link rel="stylesheet" href="/producto/CSS/responsive-style-product.css">
+</head>
+<body>
+    <header class="Header">
+        <nav class="Header_menu">
+            <a class="Header_menu_link" href="/index.html">HOME</a>
+            <a class="Header_menu_link" href="/store.html">TIENDA</a>
+            <a class="Header_menu_link" href="/contacto.html">CONTACTO</a>
+
+            <img class="icono_mya" src="https://i.postimg.cc/G3zTsXwK/Logo-Mya2-1.png" alt="icono_mya">
+        </nav>
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-cart">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                </svg>
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+            <div class="container-cart-products hidden-cart">
+                <div class="row-product hidden">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">1</span>
+                            <p class="titulo-producto-carrito">Tengo Novia Toxica</p>
+                            <span class="precio-producto-carrito">S/80</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-close">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="cart-total hidden">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">S/200</span>
+                    <button onclick="enviar();" id="send-to-whatsapp" class="btn-send-whatsapp">Enviar a WhatsApp</button>
+                </div>
+                <p class="cart-empty">El carrito está vacío</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-items" id="product-container">
+        <div class="item" data-brand="Alfaparf" data-price="68">
+            <figure>
+                <img src="https://i.postimg.cc/hPhw7JMG/SEMI-DI-LINO-Reconstruction-Reparative-Mask-PF025123-01.png" alt="producto">
+            </figure>
+                <div class="info-product">
+                    <h2>Reparative Mask - Tarro 200 ml Alfaparf</h2>
+                    <p class="description">Es una máscara reestructurante para cabellos dañados, que actúa como un tratamiento intensivo acondicionador. Su función principal es la reconstrucción profunda de la fibra capilar, aumentando la resistencia del cabello al quiebre, dejándolo más fuerte, brillante y con un aspecto sano.</p>
+                    <div class="price-container">
+                        <p class="price">S/68</p>
+                        <div class="product-quantity">
+                            <button class="btn-decrease">-</button>
+                            <span class="quantity">1</span>
+                            <button class="btn-increase">+</button>
+                        </div>
+                        <button class="btn-add-cart">Añadir al carrito</button>
+                    </div>
+                    <!-- Sistema de calificación del usuario -->
+                    <p>Clasifica el producto:</p>
+                    <div class="rating">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <!-- Estrellas para mostrar la calificación promedio -->
+                    <div class="average-rating">
+                        <p>Calificación promedio:</p>
+                        <div class="rating-info">
+                            <div class="rating">
+                                <span class="average-star">&#9733;</span>
+                                <span class="average-star">&#9733;</span>
+                                <span class="average-star">&#9733;</span>
+                                <span class="average-star">&#9733;</span>
+                                <span class="average-star">&#9733;</span>
+                            </div>
+                            <p id="average-text">0.0 de 5.0</p> <!-- Agregado para mostrar el promedio -->
+                            <p>Basado en <span id="total-ratings">0</span> calificaciones</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Mya Store. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/producto/JS/index.js"></script>
+</body>
+</html>

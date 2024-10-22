@@ -26,7 +26,6 @@ html, body {
 
 body {
     color: #333;
-    display: flex;
     font-size: 16px;
     line-height: 1.6;
     flex-direction: column;
@@ -35,7 +34,7 @@ body {
 }
 
 /* Header */
-header {
+.Header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,6 +47,7 @@ header {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     align-items: center;
 }
@@ -71,7 +71,7 @@ header {
     height: auto;
 }
 
-/* Centering the navigation links */
+/* Centrado de los enlaces de navegación */
 .Header_menu {
     display: flex;
     flex-wrap: wrap;
@@ -81,14 +81,6 @@ header {
 
 .Header_menu_link {
     margin: 0 20px; /* Ajusta el espacio entre los enlaces */
-}
-
-.Header_menu_link:first-child {
-    margin-left: 0;
-}
-
-.Header_menu_link:last-child {
-    margin-right: 0;
 }
 
 .container-icon {
@@ -113,24 +105,13 @@ header {
     font-size: 12px;
 }
 
-.header-search {
-    flex: 1;
-    max-width: 300px;
-    text-align: center;
-}
-
 .icon-cart {
     width: 40px;
     height: 40px;
     stroke: #000;
-    flex: 1;
-    max-width: 300px;
-    text-align: center;
-}
-
-.icon-cart:hover {
     cursor: pointer;
 }
+
 
 /* Carrito de Compras */
 .container-cart-products {
@@ -158,6 +139,7 @@ header {
     display: flex;
     justify-content: space-between;
     flex: 0.8;
+    gap: 15px;
 }
 
 .titulo-producto-carrito {
@@ -178,13 +160,14 @@ header {
 .icon-close {
     width: 25px;
     height: 25px;
+    cursor: pointer;
 }
 
 .icon-close:hover {
     stroke: red;
-    cursor: pointer;
 }
 
+/* Carrito Total */
 .cart-total {
     display: flex;
     justify-content: center;
@@ -206,6 +189,7 @@ header {
 .hidden-cart {
     display: none;
 }
+
 
 /* Estilos para los botones de aumentar y disminuir cantidad */
 .product-quantity-buttons {
@@ -241,195 +225,262 @@ header {
     background-color: #1DA851;
 }
 
-/* Principal */
-.container-items {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Asegura tres columnas */
-    gap: 20px; /* Espacio entre los elementos */
-}
-
-.item, .item-compact {
-    border-radius: 10px;
-    min-height: 500px; /* Altura mínima para asegurar que el contenido completo se vea */
+/* Price and Button side by side */
+.price-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all .3s ease; /* Transición suave para hover */
+    align-items: center;
+    gap: 15px;
 }
 
-.item:hover, .item-compact:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Efecto sombra al hacer hover */
-}
-
-.item img, .item-compact img {
-    width: 100%;
-    height: 300px; /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
-    border-radius: 10px 10px 0 0;
-    transition: transform .5s ease; /* Transición suave en el escalado */
-}
-
-.item figure, .item-compact figure {
-    overflow: hidden; /* Evita que las imágenes se desborden */
-}
-
-.item:hover img, .item-compact:hover img {
-    transform: scale(1.2); /* Efecto de zoom al hacer hover en las imágenes */
-}
-
-.info-product {
-    padding: 15px 30px;
-    flex-grow: 1; /* Para que se expanda si es necesario */
-    line-height: 1.6; /* Ajuste de la altura de línea */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Distribuye los botones uniformemente */
-    gap: 10px; /* Espacio entre los elementos internos */
-}
-
-.info-product .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.info-product a {
-    padding: 10px;
-    background-color: #ff4081;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color .3s ease;
-    text-align: center;
-    margin: 0; /* Elimina márgenes entre botones */
-}
-
-.info-product a:hover {
-    background-color: #e73370; /* Color más oscuro al hacer hover */
-}
-
-.info-product a {
-    text-decoration: none;
-    color: white;
-}
-
-/*normal*/
 .price {
+    font-size: 25px;
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.product-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-quantity .quantity {
     font-size: 18px;
-    font-weight: 900;
+    font-weight: bold;
+    width: 40px;
+    text-align: center;
+}
+
+.product-quantity button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.product-quantity button:hover {
+    background-color: #e0e0e0;
 }
 
 .info-product button {
     border: none;
     background: none;
-    background-color: #ff4081; /* Color más brillante para el botón */
+    background-color: #000;
     color: #fff;
-    font-size: 18px; /* Tamaño de texto más grande en el botón */
-    font-weight: bold; /* Negrita en el texto del botón */
-    padding: 15px 20px; /* Más espacio en el botón */
-    border-radius: 8px; /* Bordes más redondeados */
-    transition: background-color 0.3s ease; /* Animación al pasar el cursor */
+    padding: 15px 10px;
     cursor: pointer;
 }
 
-.info-product button:hover{
-    background-color: #e91e63; /* Color más oscuro en hover */
-}
-
+/* Mensaje carrito vacío */
 .cart-empty {
-    padding: 10%; /* Usa un padding en porcentaje para que se ajuste dinámicamente */
+    padding: 10%;
     text-align: center;
-    font-size: 1.2rem; /* Asegura que el texto sea legible en diferentes tamaños de pantalla */
+    font-size: 1.2rem;
 }
 
 .hidden {
     display: none;
 }
 
-/* Botón de ver galería */
-.btn-view-gallery {
-    border: none;
-    background: none;
-    background-color: #ff4081; /* Color más brillante para el botón */
-    color: #fff;
-    border-radius: 8px; /* Bordes más redondeados */
-    padding: 6px 10px;
-    cursor: pointer;
-    font-size: 18px; /* Tamaño de texto más grande en el botón */
-    font-weight: bold; /* Negrita en el texto del botón */
-    transition: background-color 0.3s ease; /* Animación al pasar el cursor */
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+/* Contenedor principal */
+.product-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
 
-.btn-view-gallery:hover {
-    background-color: #e91e63; /* Color más oscuro en hover */
+/* Columna para la imagen */
+.product-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain; /* O puedes usar 'cover' según cómo desees que se vea la imagen */
+    width: 100%;
+    height: auto;
 }
 
-#search-form {
-    display: flex;
-    justify-content: center;
+.product-image img {
+    max-width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-#search-input {
-    padding: 8px;
-    font-size: 16px;
-    width: 150px; /* Ancho reducido */
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
+.product-image-container {
+    width: 100%;
+    max-width: 400px; /* Ajusta esto según lo que prefieras */
+    margin: 0 auto;
+    overflow: hidden;
 }
 
-#search-button {
-    padding: 8px 16px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 0 4px 4px 0;
-    background-color: #f4f4f4;
-    cursor: pointer;
-}
-
-#search-button:hover {
-    background-color: #ddd;
-}
-
-/* Estilos para los filtros */
-.filters {
-    display: flex;
-    gap: 20px;
+.container-items {
+    gap: 200px;
     padding: 20px;
     background-color: #f5f5f5;
 }
 
-.filters label {
-    font-weight: bold;
-}
-
-.filters select {
-    padding: 5px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.whatsapp-bubble {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #25D366;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+.container-items .item {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
-.whatsapp-bubble img {
-    width: 35px;
-    height: 35px;
+
+.container-items .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Columna de información */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 200px; /* Añade un padding a la izquierda del texto para separarlo más de la imagen */
+    max-width: 600px; /* Puedes ajustar el ancho máximo si lo necesitas */
+}
+
+.product-info h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.product-info .price {
+    font-size: 1.8rem;
+    color: #e91e63;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.product-info p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilo del botón "Añadir al carrito" */
+.info-product button {
+    background-color: #ff4081; /* Color más brillante para el botón */
+    font-size: 18px; /* Tamaño de texto más grande en el botón */
+    font-weight: bold; /* Negrita en el texto del botón */
+    padding: 15px 20px; /* Más espacio en el botón */
+    border-radius: 8px; /* Bordes más redondeados */
+    transition: background-color 0.3s ease; /* Animación al pasar el cursor */
+    cursor: pointer; /* Cambio de cursor al pasar por encima */
+    text-align: center;
+    border: none;
+    color: #fff;
+}
+
+/* Cambios en el hover del botón */
+.info-product button:hover {
+    background-color: #e91e63; /* Color más oscuro en hover */
+}
+
+
+/* Estilo para la calificación de estrellas */
+.rating {
+    display: flex;
+    direction: ltr; /* De izquierda a derecha para las estrellas del usuario */
+}
+
+#average-text {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    color: #333; /* Color para el texto del promedio */
+}
+
+.star,
+.average-star {
+    font-size: 2rem;
+    color: #ccc; /* Color por defecto */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.star:hover,
+.star.hovered,
+.average-star.active {
+    color: #FFD700; /* Color de las estrellas activas */
+}
+
+.star.active {
+    color: #FFD700; /* Color de las estrellas activas */
+}
+
+.rating-info {
+    margin-top: 10px;
+}
+
+.rating-info p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.average-rating .rating .average-star {
+    font-size: 2rem; /* Ajusta el tamaño de las estrellas */
+    color: #ccc; /* Color por defecto */
+    transition: color 0.3s ease; /* Transición suave al cambiar color */
+    position: relative; /* Necesario para la media estrella */
+}
+
+.average-rating .rating .average-star.active {
+    color: #FFD700; /* Color dorado cuando se activa */
+}
+
+/* Media estrella */
+.average-star.half::before {
+    content: '\2605'; /* Estrella llena */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #FFD700; /* Color dorado */
+    width: 50%; /* Solo llenamos la mitad */
+}
+
+/* Cuarta estrella */
+.average-star.quarter::before {
+    content: '\2605'; /* Estrella llena */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #FFD700; /* Color dorado */
+    width: 25%; /* Solo llenamos un cuarto */
+}
+
+/* Tres cuartas partes de estrella */
+.average-star.three-quarters::before {
+    content: '\2605'; /* Estrella llena */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #FFD700; /* Color dorado */
+    width: 75%; /* Llenamos tres cuartos */
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #ec407a, #ab47bc 50%, #f48fb1);
+    width: auto;
+    display: flex;
+    bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    margin-top: auto;
 }
